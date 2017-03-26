@@ -20,7 +20,6 @@ git config --global alias.st status
 
 ## 操作
 git init 将一个文件夹设置为git代码仓库
-git clone clone一个远程仓库到本地
 git status 查看仓库状态
 git add <file> 提交文件到暂存区
 git add . 提交所有改动到暂存区
@@ -35,7 +34,7 @@ git diff HEAD 与上一commit节点的差异
 git diff HEAD^ 与上上commit节点的差异
 git blame <file> 追溯一个指定文件的历史修改记录
 gitk 查看图形化的Log记录
-git checkout <file> 修改文件之后，git add指令之前，抛弃当前本地所有修改，恢复到上次最后提交版本；执行add指令将代码提交到暂存区后，再修改该文件，然后执行checkout指令，则会将该文件恢复到执行add操作后的初始状态，即恢复add后到所有修改。
+git checkout <file> 修改文件之后，git add指令之前，抛弃当前本地所有修改，恢复到上次最后提交版本；执行add指令将代码提交到暂存区后，再修改该文件，然后执行checkout指令，则会将该文件恢复到执行add操作后的初始状态，即恢复add后的所有修改。
 git reset HEAD <file> 将文件移出暂存区
 git reset --hard HEAD^ 回退到上一个版本（HEAD^^：上上个版本， HEAD~100：上100个版本）
 git reset --hard commit id 回退到指定版本版本
@@ -81,7 +80,7 @@ git tag v1 <commit id> 创建tag，指定在commit id上创建
 git tag -a v1 -m "version1" 创建带有注释说明到tag，-a指定tag名，-m指定注释说明
 git tag -a v1 -m "version1" <commit id> 创建带有注释说明到tag，-a指定tag名，-m指定注释说明，指定在commit id上创建
 git tag 查看本地tag
-git show <tag name> 查看指定tag到详细信息
+git show <tag name> 查看指定tag的详细信息
 git tag -d <tag name> 删除tag
 git push origin <tag name> 推送本地Tag到远程
 git oush origin --tags 推送所有本地Tag到远程
