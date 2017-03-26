@@ -5,18 +5,18 @@ tags:
 ---
 
 ## 配置
-git --version 查看当前git版本
-git config --list 查看当前git配置信息
-git config --list --global git通用配置信息
+git \-\-version 查看当前git版本
+git config \-\-list 查看当前git配置信息
+git config \-\-list \-\-global git通用配置信息
 git config user.name 获取单独的配置信息(name)
 git config user.email 获取单独的配置信息(email)
-git config --global user.name cxl 配置name
-git config --global user.eamil xxx@xx.com 配置email
-git config --global add user.name cxl user.email xx@xx.com 同时配置多个参数
-git config --global unset user.name cxl 删除配置
+git config \-\-global user.name cxl 配置name
+git config \-\-global user.eamil xxx@xx.com 配置email
+git config \-\-global add user.name cxl user.email xx@xx.com 同时配置多个参数
+git config \-\-global unset user.name cxl 删除配置
 
 ## 配置别名
-git config --global alias.st status
+git config \-\-global alias.st status
 
 ## 操作
 git init 将一个文件夹设置为git代码仓库
@@ -24,7 +24,7 @@ git status 查看仓库状态
 git add <file> 提交文件到暂存区
 git add . 提交所有改动到暂存区
 git commit -m "提交说明" 提交到仓库
-git commit --amend -m "提交说明" 追加修改
+git commit \-\-amend -m "提交说明" 追加修改
 git log 查看提交记录
 git reflog 查看提交记录，即使版本已回退
 git shortlog 根据提交者名字进行分组，显示每个开发者的所有commit记录
@@ -36,8 +36,8 @@ git blame <file> 追溯一个指定文件的历史修改记录
 gitk 查看图形化的Log记录
 git checkout <file> 修改文件之后，git add指令之前，抛弃当前本地所有修改，恢复到上次最后提交版本；执行add指令将代码提交到暂存区后，再修改该文件，然后执行checkout指令，则会将该文件恢复到执行add操作后的初始状态，即恢复add后的所有修改。
 git reset HEAD <file> 将文件移出暂存区
-git reset --hard HEAD^ 回退到上一个版本（HEAD^^：上上个版本， HEAD~100：上100个版本）
-git reset --hard commit id 回退到指定版本版本
+git reset \-\-hard HEAD^ 回退到上一个版本（HEAD^^：上上个版本， HEAD~100：上100个版本）
+git reset \-\-hard commit id 回退到指定版本版本
 git rm <file> 删除文件，不需要再执行git add,可直接执行git commit
 
 ## 文件暂存
@@ -56,7 +56,7 @@ git push -u origin master 推送本地master分支到远程仓库，-u表示将�
 git push 推送到远程仓库
 git push origin master 推送到远程仓库
 git pull 拉取最新的代码更新
-git pull --rebase 拉取最新修改，并且将本地未提交代码作用到最新版本，不会产生多余的Merge Histoey
+git pull \-\-rebase 拉取最新修改，并且将本地未提交代码作用到最新版本，不会产生多余的Merge Histoey
 git clone <git地址> 克隆远程仓库到本地
 
 # 分支
@@ -83,12 +83,12 @@ git tag 查看本地tag
 git show <tag name> 查看指定tag的详细信息
 git tag -d <tag name> 删除tag
 git push origin <tag name> 推送本地Tag到远程
-git oush origin --tags 推送所有本地Tag到远程
+git oush origin \-\-tags 推送所有本地Tag到远程
 
 ### 删除远程Tag
 - 先删除本地tag
-git tag -d v2
+  git tag -d v2
 - 再重新push到远程
-git push oigin :refs/tags/v2
+  git push oigin :refs/tags/v2
 
 
